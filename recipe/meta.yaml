@@ -1,5 +1,5 @@
 {% set name = "pyGPCCA" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: cfa2730a49ecefba3de4b2df3c59617b9a1a49495748f3273d9fb89045649795
+  sha256: a383636461698f6cda9a9e5678f9efb98ca2f8367b942221bc6d27f119f9be75
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
-  skip: True  # [py<36 or win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  skip: true  # [py<36 or win]
 
 requirements:
   host:
@@ -39,7 +39,7 @@ about:
   license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: 'Generalized Perron Cluster Cluster Analysis'
+  summary: Generalized Perron Cluster Cluster Analysis
   description: |
     pyGPCCA employs Generalized Perron Cluster Cluster Analysis (G-PCCA) to coarse-grain reversible and in particular non-reversible Markov State Models.
     If you use pyGPCCA or parts of it, please cite Reuter et al. 2018 (https://doi.org/10.1021/acs.jctc.8b00079).
