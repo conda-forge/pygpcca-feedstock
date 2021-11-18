@@ -12,7 +12,7 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
-  skip: true  # [py<36 or win]
+  skip: true  # [py<36]
 
 requirements:
   host:
@@ -24,7 +24,8 @@ requirements:
     - numpy >=1.15.0
     - scipy >=1.5.0
     - docrep >=0.3.1
-    - mpi4py >=3.0.3
+    - mpi4py >=3.0.3  # [not win]
+    - msmpi >=10.1.1  # [win]
     - petsc >=3.13.0,!=3.14.0
     - slepc >=3.13.0
     - petsc4py >=3.13.0,!=3.14.0
@@ -33,6 +34,9 @@ requirements:
 test:
   imports:
     - pygpcca
+    - petsc4py
+    - slepc4py
+    - mpi4py
 
 about:
   home: https://github.com/msmdev/pygpcca
