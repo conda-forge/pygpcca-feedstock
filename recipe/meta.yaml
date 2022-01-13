@@ -1,5 +1,5 @@
 {% set name = "pyGPCCA" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name|lower }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: a383636461698f6cda9a9e5678f9efb98ca2f8367b942221bc6d27f119f9be75
+  sha256: af801d52d1653c1978a82cf98b2d8b208a295f7c461a4e58866da8d4ca94c80e
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   skip: true  # [py<36 or win]
 
