@@ -16,7 +16,6 @@ Documentation: https://pygpcca.readthedocs.io/
 pyGPCCA employs Generalized Perron Cluster Cluster Analysis (G-PCCA) to coarse-grain reversible and in particular non-reversible Markov State Models.
 If you use pyGPCCA or parts of it, please cite Reuter et al. 2018 (https://doi.org/10.1021/acs.jctc.8b00079).
 
-
 Current build status
 ====================
 
